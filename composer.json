@@ -23,7 +23,6 @@
     "require": {
         "flarum/core": "^2.0.0-beta.3",
         "ext-gd": "*",
-        "ext-redis": "*",
         "flarum/approval": "*",
         "flarum/bbcode": "*",
         "flarum/emoji": "*",
@@ -41,7 +40,8 @@
         "flarum/sticky": "*",
         "flarum/subscriptions": "*",
         "flarum/suspend": "*",
-        "flarum/tags": "*"
+        "flarum/tags": "*",
+        "predis/predis": "^2.2"
     },
     "config": {
         "preferred-install": "dist",
