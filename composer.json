@@ -40,7 +40,8 @@
         "flarum/sticky": "*",
         "flarum/subscriptions": "*",
         "flarum/suspend": "*",
-        "flarum/tags": "*"
+        "flarum/tags": "*",
+        "flarum-lang/chinese-simplified": "*"
     },
     "config": {
         "preferred-install": "dist",
