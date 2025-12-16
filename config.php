@@ -19,6 +19,20 @@ return [
         'engine' => 'InnoDB',
         'prefix_indexes' => true,
     ],
+    'redis' => [
+        'client' => 'phpredis',
+        'default' => [
+            'host' => $redisUrl['host'],
+            'password' => $redisUrl['pass'],
+            'port' => $redisUrl['port'],
+            'database' => 0,
+        ],
+    ],
+    'session' => [
+        'driver' => 'redis',
+        'cookie' => 'flarum_session',
+        'lifetime' => 60,
+    ],
     'url' => getenv('APP_URL'),
     'paths' => [
         'api' => 'api',
