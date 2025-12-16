@@ -35,11 +35,13 @@
         "flarum/mentions": "*",
         "flarum/messages": "*",
         "flarum/nicknames": "*",
+        "flarum/pusher": "*",
         "flarum/statistics": "*",
         "flarum/sticky": "*",
         "flarum/subscriptions": "*",
         "flarum/suspend": "*",
-        "flarum/tags": "*"
+        "flarum/tags": "*",
+        "predis/predis": "^2.2"
     },
     "config": {
         "preferred-install": "dist",
