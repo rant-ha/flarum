@@ -19,19 +19,22 @@ return [
 
     // Session 配置（优先由环境变量控制）
     'session' => [
-        // 可选值：cookie | file | redis  （默认改为 redis）
+        // 可选值：cookie | file | redis
         'driver' => getenv('SESSION_DRIVER') ?: 'redis',
         'cookie' => getenv('SESSION_COOKIE') ?: 'flarum_session',
-        // 建议 60-120 分钟以减少 Redis 内存消耗
         'lifetime' => intval(getenv('SESSION_LIFETIME') ?: 60),
     ],
 
-    // Redis 连接配置（使用 REDIS_URL）
+    // Redis 连接配置（支持 Heroku 常见变量名）
     'redis' => [
-        // client: 'phpredis' 对应 PHP 的 ext-redis；若你使用 predis 改为 'predis'
-        'client' => getenv('REDIS_CLIENT') ?: 'phpredis',
+        // 优先使用用户显式设置的 REDIS_CLIENT，否则根据运行时检测选择：
+        // 若 PHP 已加载 ext-redis -> phpredis；否则使用 predis（需要 composer 安装 predis/predis）
+        'client' => getenv('REDIS_CLIENT') ?: (extension_loaded('redis') ? 'phpredis' : 'predis'),
+
         'default' => [
-            'url' => getenv('REDIS_URL') ?: null,
+            // 支持多种 Heroku/第三方服务环境变量名：
+            // 首先 REDIS_URL（通用），其次 REDISCLOUD_URL（Redis Cloud），然后其他可能的名
+            'url' => getenv('REDIS_URL') ?: getenv('REDISCLOUD_URL') ?: getenv('REDISGREEN_URL') ?: null,
         ],
     ],
 ];
