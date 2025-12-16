@@ -1,48 +1,51 @@
-<?php
-
-$appUrl = getenv('APP_URL');
-
-// Database configuration: Prefer explicit vars, fallback to parsing JAWSDB_URL
-$dbHost = getenv('DB_HOST');
-$dbUser = getenv('DB_USER');
-$dbPass = getenv('DB_PASS');
-$dbName = getenv('DB_NAME');
-$dbPort = 3306;
-
-if (!$dbHost && getenv('JAWSDB_URL')) {
-    $dbParts = parse_url(getenv('JAWSDB_URL'));
-    if ($dbParts) {
-        $dbHost = $dbParts['host'] ?? null;
-        $dbUser = $dbParts['user'] ?? null;
-        $dbPass = $dbParts['pass'] ?? null;
-        $dbName = isset($dbParts['path']) ? ltrim($dbParts['path'], '/') : null;
-        $dbPort = $dbParts['port'] ?? 3306;
-    }
+{
+    "name": "flarum/flarum",
+    "description": "Delightfully simple forum software.",
+    "type": "project",
+    "keywords": [
+        "forum",
+        "discussion"
+    ],
+    "homepage": "https://flarum.org/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Flarum",
+            "email": "info@flarum.org",
+            "homepage": "https://flarum.org/team"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/flarum/core/issues",
+        "source": "https://github.com/flarum/flarum",
+        "docs": "https://docs.flarum.org/"
+    },
+    "require": {
+        "flarum/core": "^2.0.0-beta.3",
+        "ext-gd": "*",
+        "ext-redis": "*",
+        "flarum/approval": "*",
+        "flarum/bbcode": "*",
+        "flarum/emoji": "*",
+        "flarum/lang-english": "*",
+        "flarum/flags": "*",
+        "flarum/gdpr": "*",
+        "flarum/likes": "*",
+        "flarum/lock": "*",
+        "flarum/markdown": "*",
+        "flarum/mentions": "*",
+        "flarum/messages": "*",
+        "flarum/nicknames": "*",
+        "flarum/statistics": "*",
+        "flarum/sticky": "*",
+        "flarum/subscriptions": "*",
+        "flarum/suspend": "*",
+        "flarum/tags": "*"
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "beta",
+    "prefer-stable": true
 }
-
-return [
-    'debug' => true,
-    'database' => [
-        'driver' => 'mysql',
-        'host' => $dbHost ?? '127.0.0.1',
-        'port' => $dbPort,
-        'database' => $dbName ?? 'flarum',
-        'username' => $dbUser ?? 'root',
-        'password' => $dbPass ?? '',
-        'charset' => 'utf8mb4',
-        'collation' => 'utf8mb4_unicode_ci',
-        'prefix' => '',
-        'strict' => false,
-        'engine' => 'InnoDB',
-        'prefix_indexes' => true,
-    ],
-    'url' => $appUrl ?: 'http://localhost',
-    'paths' => [
-        'api' => 'api',
-        'admin' => 'admin',
-    ],
-    'headers' => [
-        'poweredByHeader' => true,
-        'referrerPolicy' => 'same-origin',
-    ],
-];
