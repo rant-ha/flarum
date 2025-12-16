@@ -1,17 +1,21 @@
 <?php
 
-$dbUrl = parse_url(getenv('JAWSDB_URL'));
-$redisUrl = parse_url(getenv('REDISCLOUD_URL'));
+$jawsDbUrl = getenv('JAWSDB_URL');
+$redisCloudUrl = getenv('REDISCLOUD_URL');
+$appUrl = getenv('APP_URL');
+
+$dbParts = $jawsDbUrl ? parse_url($jawsDbUrl) : [];
+$redisParts = $redisCloudUrl ? parse_url($redisCloudUrl) : [];
 
 return [
-    'debug' => getenv('APP_DEBUG') === 'true',
+    'debug' => true,
     'database' => [
         'driver' => 'mysql',
-        'host' => $dbUrl['host'],
-        'port' => $dbUrl['port'] ?? 3306,
-        'database' => ltrim($dbUrl['path'], '/'),
-        'username' => $dbUrl['user'],
-        'password' => $dbUrl['pass'],
+        'host' => $dbParts['host'] ?? '127.0.0.1',
+        'port' => $dbParts['port'] ?? 3306,
+        'database' => isset($dbParts['path']) ? ltrim($dbParts['path'], '/') : 'flarum',
+        'username' => $dbParts['user'] ?? 'root',
+        'password' => $dbParts['pass'] ?? '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
         'prefix' => '',
@@ -22,9 +26,9 @@ return [
     'redis' => [
         'client' => 'phpredis',
         'default' => [
-            'host' => $redisUrl['host'],
-            'password' => $redisUrl['pass'],
-            'port' => $redisUrl['port'],
+            'host' => $redisParts['host'] ?? '127.0.0.1',
+            'password' => $redisParts['pass'] ?? null,
+            'port' => $redisParts['port'] ?? 6379,
             'database' => 0,
         ],
     ],
@@ -33,7 +37,7 @@ return [
         'cookie' => 'flarum_session',
         'lifetime' => 60,
     ],
-    'url' => getenv('APP_URL'),
+    'url' => $appUrl ?: 'http://localhost',
     'paths' => [
         'api' => 'api',
         'admin' => 'admin',
