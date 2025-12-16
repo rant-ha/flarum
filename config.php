@@ -56,6 +56,9 @@ return [
         'cookie' => 'flarum_session',
         'lifetime' => 60,
     ],
+    'queue' => [
+        'driver' => 'sync',
+    ],
     'url' => $appUrl ?: 'http://localhost',
     'paths' => [
         'api' => 'api',
