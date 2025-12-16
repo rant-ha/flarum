@@ -20,12 +20,6 @@
         "source": "https://github.com/flarum/flarum",
         "docs": "https://docs.flarum.org/"
     },
-    "repositories": [
-      {
-        "type": "vcs",
-        "url": "https://github.com/soggier0m/chinese-simplified"
-      }
-    ],
     "require": {
         "flarum/core": "^2.0.0-beta.3",
         "ext-gd": "*",
@@ -46,8 +40,7 @@
         "flarum/sticky": "*",
         "flarum/subscriptions": "*",
         "flarum/suspend": "*",
-        "flarum/tags": "*",
-        "flarum-lang/chinese-simplified": "dev-master"
+        "flarum/tags": "*"
     },
     "config": {
         "preferred-install": "dist",
