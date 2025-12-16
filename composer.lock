@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d0d0f73730017701762e1f4522ee8417",
+    "content-hash": "05837699ac5f056a605e7553a68d35f7",
     "packages": [
         {
             "name": "asispts/http-accept",
@@ -10502,7 +10502,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "ext-gd": "*"
+        "ext-gd": "*",
+        "ext-redis": "*"
     },
     "platform-dev": {},
     "plugin-api-version": "2.9.0"
