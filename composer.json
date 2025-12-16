@@ -22,6 +22,7 @@
     },
     "require": {
         "flarum/core": "^2.0.0-beta.3",
+        "ext-gd": "*",
         "flarum/approval": "*",
         "flarum/bbcode": "*",
         "flarum/emoji": "*",
