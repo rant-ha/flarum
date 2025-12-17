@@ -47,6 +47,16 @@
         "preferred-install": "dist",
         "sort-packages": true
     },
+    "scripts": {
+        "post-install-cmd": [
+            "@php flarum assets:publish || true",
+            "@php flarum cache:clear || true"
+        ],
+        "post-update-cmd": [
+            "@php flarum assets:publish || true",
+            "@php flarum cache:clear || true"
+        ]
+    },
     "minimum-stability": "beta",
     "prefer-stable": true
 }
