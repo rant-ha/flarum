@@ -16,6 +16,5 @@ return [
     (new Extend\Frontend('admin'))
         ->css(__DIR__.'/resources/less/custom.less'),
     
-    // 直接加载中文翻译文件
-    (new Extend\Locales(__DIR__.'/resources/locale')),
+
 ];
