@@ -20,6 +20,12 @@
         "source": "https://github.com/flarum/flarum",
         "docs": "https://docs.flarum.org/"
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/*"
+        }
+    ],
     "require": {
         "flarum/core": "^2.0.0-beta.3",
         "ext-gd": "*",
@@ -41,7 +47,8 @@
         "flarum/subscriptions": "*",
         "flarum/suspend": "*",
         "flarum/tags": "*",
-        "predis/predis": "^2.2"
+        "predis/predis": "^2.2",
+        "local/lang-chinese-simplified": "*"
     },
     "config": {
         "preferred-install": "dist",
