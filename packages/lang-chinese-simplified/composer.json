@@ -1,0 +1,15 @@
+{
+    "name": "local/lang-chinese-simplified",
+    "description": "Simplified Chinese language pack for Flarum 2.0",
+    "type": "flarum-locale",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^2.0"
+    },
+    "extra": {
+        "flarum-locale": {
+            "code": "zh",
+            "title": "简体中文"
+        }
+    }
+}
