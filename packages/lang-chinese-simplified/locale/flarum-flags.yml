@@ -34,3 +34,4 @@ flarum-flags:
 
     settings:
       guidelines_url_label: 社区指南链接
+      guidelines_url: 社区指南链接

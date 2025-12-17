@@ -20,7 +20,9 @@ flarum-mentions:
 
     settings:
       notify_post_mentioned_label: 有人回复了我的帖子
+      notify_post_mentioned: 有人回复了我的帖子
       notify_user_mentioned_label: 有人在帖子中 @我
+      notify_user_mentioned: 有人在帖子中 @我
 
   admin:
     permissions:
@@ -28,3 +30,4 @@ flarum-mentions:
 
     settings:
       allow_username_format_label: 允许使用用户名格式提及
+      allow_username_format: 允许使用用户名格式提及

@@ -17,6 +17,7 @@ flarum-lock:
 
     settings:
       notify_discussion_locked_label: 有人锁定了我参与的帖子
+      notify_discussion_locked: 有人锁定了我参与的帖子
 
   admin:
     permissions:

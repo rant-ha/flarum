@@ -18,6 +18,7 @@ flarum-subscriptions:
 
     settings:
       notify_new_post_label: 我关注的帖子有新回复
+      notify_new_post: 我关注的帖子有新回复
 
     notifications:
       new_post_text: "{username} 发表了回复"

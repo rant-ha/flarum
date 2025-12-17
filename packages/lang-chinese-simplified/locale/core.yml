@@ -186,6 +186,7 @@ core:
         discussion: 帖子
         feature: 功能
         formatting: 格式化
+        languages: 语言
         moderation: 内容管理
         other: 其他扩展
         theme: 主题
@@ -733,3 +734,30 @@ core:
     members: 会员
     mod: 版主
     mods: 版主
+
+  lib:
+    search:
+      title: 搜索
+      placeholder: 搜索...
+      options_heading: 选项
+      preview_heading: 预览
+      no_search_text: 没有找到内容
+      
+    search_source:
+      discussions:
+        heading: 帖子
+      posts:
+        heading: 回复
+        
+    gambits:
+      group_keys:
+        is: is
+      discussions:
+        hidden:
+          key: hidden
+        author:
+          key: author
+          hint: 作者
+        created:
+          key: created
+          hint: 创建时间

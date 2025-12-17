@@ -11,6 +11,7 @@ flarum-likes:
 
     settings:
       notify_post_liked_label: 有人赞了我的回复
+      notify_post_liked: 有人赞了我的回复
 
     notifications:
       post_liked_text: "{username} 赞了你的回复"

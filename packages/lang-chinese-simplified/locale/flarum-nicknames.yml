@@ -11,8 +11,10 @@ flarum-nicknames:
 
   admin:
     settings:
-      max_length_label: 昵称最大长度
-      min_length_label: 昵称最小长度
+      max_label: 昵称最大长度
+      min_label: 昵称最小长度
       regex_label: 昵称正则表达式
       set_on_registration_label: 允许用户在注册时设置昵称
+      random_username_label: 随机生成用户名
+      random_username_help: 注册时如果不填写，将自动生成随机用户名
       unique_label: 昵称必须唯一

@@ -6,8 +6,11 @@ flarum-suspend:
 
     suspend_user:
       indefinitely_label: 永久封禁
+      indefinitely: 永久封禁
       limited_time_label: 封禁至...
+      limited_time: 封禁至...
       not_suspended_label: 未封禁
+      not_suspended: 未封禁
       suspended_message: "你已被封禁至 {date}，在此之前无法发帖。"
       suspended_indefinitely_message: 你已被永久封禁，无法发帖。
       suspended_title: 已封禁
