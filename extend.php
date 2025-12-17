@@ -15,4 +15,7 @@ return [
     
     (new Extend\Frontend('admin'))
         ->css(__DIR__.'/resources/less/custom.less'),
+    
+    // 注册本地中文语言包
+    (new Extend\LanguagePack(__DIR__.'/resources/locale')),
 ];
