@@ -9,7 +9,7 @@
     },
     "extra": {
         "flarum-locale": {
-            "code": "zh-Hans",
+            "code": "zh",
             "title": "简体中文"
         },
         "flarum-extension": {
