@@ -1,0 +1,30 @@
+flarum-mentions:
+
+  forum:
+    composer_reply:
+      reply_to_post_text: "在回复 {username} 的帖子 #{id}..."
+
+    discussion:
+      mentioned_by_text: "{username} 在回复 #{number} 中提到了你"
+
+    notifications:
+      post_mentioned_text: "{username} 回复了你"
+      user_mentioned_text: "{username} 提到了你"
+
+    post:
+      mentioned_by:
+        popup_text: "{user_mentions_count, plural, one {1 条回复} other {# 条回复}}"
+
+    post_controls:
+      reply_button: 引用回复
+
+    settings:
+      notify_post_mentioned_label: 有人回复了我的帖子
+      notify_user_mentioned_label: 有人在帖子中 @我
+
+  admin:
+    permissions:
+      mention_users_label: "@提及用户"
+
+    settings:
+      allow_username_format_label: 允许使用用户名格式提及

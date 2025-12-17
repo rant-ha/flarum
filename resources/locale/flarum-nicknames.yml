@@ -1,0 +1,18 @@
+flarum-nicknames:
+
+  forum:
+    change_nickname:
+      title: 修改昵称
+      submit_button: => core.ref.save_changes
+      nickname_placeholder: 昵称
+
+    user:
+      nickname_label: 昵称
+
+  admin:
+    settings:
+      max_length_label: 昵称最大长度
+      min_length_label: 昵称最小长度
+      regex_label: 昵称正则表达式
+      set_on_registration_label: 允许用户在注册时设置昵称
+      unique_label: 昵称必须唯一
