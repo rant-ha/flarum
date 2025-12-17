@@ -1,0 +1,17 @@
+flarum-sticky:
+
+  forum:
+    badge:
+      sticky_tooltip: 置顶
+
+    discussion_controls:
+      sticky_button: 置顶
+      unsticky_button: 取消置顶
+
+    post_stream:
+      discussion_stickied_text: "{username} 置顶了此帖子"
+      discussion_unstickied_text: "{username} 取消置顶了此帖子"
+
+  admin:
+    permissions:
+      sticky_discussions_label: 置顶帖子
