@@ -1,0 +1,232 @@
+/* ============================================
+   QIUSUO Premium SaaS Theme
+   Design: Modern, Professional, Expensive ($200/mo feel)
+   ============================================ */
+
+:root {
+    /* 核心色板 */
+    --qs-primary-900: #0f172a; /* 深邃蓝黑 - 用于头部、强调 */
+    --qs-primary-600: #2563eb; /* 标准蓝 - 用于品牌色 */
+    --qs-primary-500: #3b82f6; /* 亮蓝 - 用于交互 */
+    
+    --qs-bg: #f8fafc;        /* 极浅灰蓝背景 */
+    --qs-surface: #ffffff;    /* 纯白表面 */
+    --qs-border: #e2e8f0;     /* 极浅边框 */
+    
+    --qs-text-main: #1e293b;  /* 主要文字 */
+    --qs-text-muted: #64748b; /* 次要文字 */
+    
+    /* 高级感阴影系统 */
+    --qs-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --qs-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --qs-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --qs-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    
+    --qs-radius: 8px; /* 更克制的圆角 */
+}
+
+/* 深色模式适配 */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --qs-bg: #020617;
+        --qs-surface: #1e293b;
+        --qs-border: #334155;
+        --qs-text-main: #f1f5f9;
+        --qs-text-muted: #94a3b8;
+        --qs-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+        --qs-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+    }
+}
+
+body {
+    background-color: var(--qs-bg) !important;
+    color: var(--qs-text-main) !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================
+   1. 头部导航 (Header)
+   风格：纯白/极简，强调阴影和磨砂感
+   ============================================ */
+.App-header .Header {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--qs-border);
+    box-shadow: var(--qs-shadow-sm);
+    height: 64px; /* 增加高度，更大气 */
+}
+
+/* 深色模式头部 */
+@media (prefers-color-scheme: dark) {
+    .App-header .Header {
+        background: rgba(15, 23, 42, 0.9) !important;
+        border-bottom-color: var(--qs-border);
+    }
+}
+
+.Header-title {
+    color: var(--qs-primary-900) !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.5px;
+    font-size: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .Header-title { color: white !important; }
+}
+
+/* 导航项 */
+.Header-controls .Button {
+    color: var(--qs-text-muted) !important;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.Header-controls .Button:hover {
+    color: var(--qs-primary-600) !important;
+    background: transparent !important;
+}
+
+/* ============================================
+   2. 英雄区域 (Hero/Banner)
+   如果 Flarum 有 WelcomeBanner
+   ============================================ */
+.Hero {
+    background: var(--qs-primary-900) !important; /* 纯色深空蓝，显贵 */
+    color: white !important;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.Hero h2 {
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+/* ============================================
+   3. 讨论列表 (Discussion List)
+   风格：精致卡片，细腻交互
+   ============================================ */
+.DiscussionListItem {
+    background: var(--qs-surface) !important;
+    border: 1px solid var(--qs-border) !important;
+    border-radius: var(--qs-radius) !important;
+    margin-bottom: 12px;
+    padding: 16px 20px !important;
+    box-shadow: var(--qs-shadow-sm);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.DiscussionListItem:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--qs-shadow-md) !important;
+    border-color: var(--qs-primary-500) !important; /* 悬停微蓝边框 */
+    z-index: 10;
+}
+
+/* 头像微调 - 增加留白 */
+.DiscussionListItem-content {
+    padding-left: 0 !important;
+    display: flex;
+    align-items: center;
+}
+
+/* 标题样式 */
+.DiscussionListItem-title {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: var(--qs-text-main) !important;
+    margin-bottom: 4px;
+}
+
+.DiscussionListItem-info {
+    font-size: 13px;
+    color: var(--qs-text-muted);
+}
+
+/* 标签样式 (Tags) - 胶囊风格 */
+.TagLabel {
+    border-radius: 4px !important; /* 稍微方一点，更商务 */
+    font-size: 11px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    padding: 2px 8px !important;
+}
+
+/* ============================================
+   4. 按钮系统 (Buttons)
+   风格：实色，无渐变，强调质感
+   ============================================ */
+.Button--primary {
+    background: var(--qs-primary-900) !important; /* 深黑蓝按钮 */
+    color: white !important;
+    border: 1px solid transparent !important;
+    box-shadow: var(--qs-shadow-md);
+    font-weight: 600 !important;
+    padding: 8px 20px !important;
+    transition: all 0.2s !important;
+}
+
+.Button--primary:hover {
+    background: var(--qs-primary-600) !important; /* 悬停变亮蓝 */
+    transform: translateY(-1px);
+    box-shadow: var(--qs-shadow-lg) !important;
+}
+
+/* 侧边栏 "Start a Discussion" 按钮特殊处理 */
+.IndexPage-newDiscussion .Button--primary {
+    width: 100%;
+    padding: 12px !important;
+    font-size: 15px;
+}
+
+/* ============================================
+   5. 侧边栏 (Sidebar)
+   ============================================ */
+.App-content {
+    margin-top: 20px;
+}
+
+.SideNav {
+    padding-right: 20px;
+}
+
+.SideNav-item .Button {
+    border-radius: var(--qs-radius);
+    color: var(--qs-text-muted);
+    font-weight: 500;
+    padding: 10px 16px;
+}
+
+.SideNav-item .Button:hover, 
+.SideNav-item .Button.active {
+    background: var(--qs-surface) !important;
+    color: var(--qs-primary-600) !important;
+    box-shadow: var(--qs-shadow-sm);
+}
+
+.SideNav-item .Button.active {
+    font-weight: 700;
+    border-left: 3px solid var(--qs-primary-600);
+}
+
+/* 下拉菜单美化 */
+.Dropdown-menu {
+    background: var(--qs-surface) !important;
+    border: 1px solid var(--qs-border) !important;
+    border-radius: var(--qs-radius) !important;
+    box-shadow: var(--qs-shadow-xl) !important;
+    padding: 8px !important;
+}
+
+.Dropdown-menu > li > a {
+    border-radius: 4px;
+    margin-bottom: 2px;
+}
+
+.Dropdown-menu > li > a:hover {
+    background: var(--qs-bg) !important;
+    color: var(--qs-primary-600) !important;
+}
