@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a578b722e44e0978065c39d831657d25",
+    "content-hash": "1825abc5dcf30a2f7c1aa16bcf287b26",
     "packages": [
         {
             "name": "asispts/http-accept",
@@ -5527,6 +5527,32 @@
                 }
             ],
             "time": "2024-09-21T08:32:55+00:00"
+        },
+        {
+            "name": "local/lang-chinese-simplified",
+            "version": "2.0.0",
+            "dist": {
+                "type": "path",
+                "url": "packages/lang-chinese-simplified",
+                "reference": "9a879af6c3b5e99ae29c73ea42ea84f7ae9796fa"
+            },
+            "require": {
+                "flarum/core": "^2.0"
+            },
+            "type": "flarum-locale",
+            "extra": {
+                "flarum-locale": {
+                    "code": "zh",
+                    "title": "简体中文"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Simplified Chinese language pack for Flarum 2.0",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "matthiasmullie/minify",
