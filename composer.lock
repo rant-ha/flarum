@@ -5534,7 +5534,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/lang-chinese-simplified",
-                "reference": "04203bd8db84c97e2e72b239e9acda0633a4f215"
+                "reference": "e938789b04a446b01ccf63e89405d20353a50dfa"
             },
             "require": {
                 "flarum/core": "^2.0"
@@ -5542,7 +5542,7 @@
             "type": "flarum-extension",
             "extra": {
                 "flarum-locale": {
-                    "code": "zh",
+                    "code": "zh-Hans",
                     "title": "简体中文"
                 },
                 "flarum-extension": {
