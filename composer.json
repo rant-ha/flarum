@@ -41,7 +41,11 @@
         "flarum/subscriptions": "*",
         "flarum/suspend": "*",
         "flarum/tags": "*",
-        "predis/predis": "^2.2"
+        "predis/predis": "^2.2",
+        "fof/nightmode": "*",
+        "fof/user-bio": "*",
+        "flarumite/simple-discussion-views": "*",
+        "littlecxm/flarum-lang-chinese-simplified": "*"
     },
     "config": {
         "preferred-install": "dist",
