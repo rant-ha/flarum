@@ -1,0 +1,15 @@
+flarum-pusher:
+  admin:
+    pusher_settings:
+      title: Pusher 设置
+      app_id_label: App ID
+      app_key_label: App Key
+      app_secret_label: App Secret
+      app_cluster_label: Cluster（集群）
+      vendor_label: 推送服务提供商
+      
+    settings:
+      use_secure_connections_label: 使用安全连接（推荐）
+
+  forum:
+    # Pusher 主要在后台工作，前端没有太多界面文本

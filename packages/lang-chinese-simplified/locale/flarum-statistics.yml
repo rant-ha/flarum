@@ -1,0 +1,19 @@
+flarum-statistics:
+  admin:
+    settings:
+      widget_helper_text: "从以下选项中选择要在管理面板显示的统计小部件"
+      widget_order_label: 统计小部件显示顺序
+      
+    dashboard:
+      total_users_label: 总用户数
+      total_discussions_label: 总帖子数
+      total_posts_label: 总回复数
+      users_today_label: 今日新用户
+      users_this_week_label: 本周新用户
+      users_this_month_label: 本月新用户
+      discussions_today_label: 今日新帖子
+      discussions_this_week_label: 本周新帖子
+      discussions_this_month_label: 本月新帖子
+      posts_today_label: 今日新回复
+      posts_this_week_label: 本周新回复
+      posts_this_month_label: 本月新回复

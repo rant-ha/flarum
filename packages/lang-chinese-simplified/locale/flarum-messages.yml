@@ -1,0 +1,77 @@
+flarum-messages:
+  admin:
+    permissions:
+      send_messages_label: 发送私信
+      view_messages_label: 查看私信
+
+  forum:
+    badge:
+      unread_messages_tooltip: "{count, plural, one {# 条未读私信} other {# 条未读私信}}"
+
+    compose:
+      cancel_button: 取消
+      submit_button: 发送
+      title_placeholder: 标题
+      to_placeholder: 收件人
+      write_message: 撰写私信
+
+    composer:
+      close_tooltip: 关闭
+      send_message_text: 发送私信给 {name}
+
+    controls:
+      delete_button: 删除对话
+      delete_confirmation: "确定要删除此对话吗？"
+      delete_message_button: 删除消息
+      delete_message_confirmation: "确定要删除此消息吗？"
+      leave_button: 离开对话
+      leave_confirmation: "确定要离开此对话吗？"
+
+    header:
+      messages_link: 私信
+
+    index:
+      empty_text: 暂无私信
+      mark_all_as_read_tooltip: 全部标为已读
+      start_conversation: 开始对话
+      title: 私信
+
+    list:
+      with_text: "{name} 与"
+
+    message:
+      deleted_text: "[已删除]"
+
+    nav:
+      all_link: 全部
+      read_link: 已读
+      unread_link: 未读
+
+    notifications:
+      message_text: "{username} 发送了新消息"
+
+    search:
+      search_placeholder: 搜索私信
+
+    settings:
+      notify_new_message_label: 收到新私信时通知我
+
+    user_controls:
+      send_message_button: 发送私信
+
+  email:
+    new_message:
+      subject: "[新消息] {title}"
+      body: |
+        嗨，{recipient_display_name}！
+
+        {sender_display_name} 发送了一条新消息给你：
+
+        {content}
+
+        点击此链接查看完整对话：
+        {url}
+
+        ---
+
+        - {forum}
