@@ -5530,11 +5530,11 @@
         },
         {
             "name": "local/lang-chinese-simplified",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "dist": {
                 "type": "path",
                 "url": "packages/lang-chinese-simplified",
-                "reference": "04203bd8db84c97e2e72b239e9acda0633a4f215"
+                "reference": "fef26ab7c64ef55551af44a6111a8db33679f66d"
             },
             "require": {
                 "flarum/core": "^2.0"
