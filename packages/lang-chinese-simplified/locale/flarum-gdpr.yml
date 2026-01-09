@@ -1,0 +1,82 @@
+flarum-gdpr:
+  admin:
+    permissions:
+      process_erasure_label: 处理账户删除请求
+      see_anonymized_user_badges_label: 查看已匿名化的用户徽章
+
+    settings:
+      allow_anonymization_label: 允许用户匿名化而非删除账户
+      default_anonymous_username_label: 默认匿名用户名
+      default_erasure_label: 默认账户删除方式
+
+  forum:
+    anonymization_confirmation: "确定要匿名化你的账户吗？此操作不可撤销。"
+    delete_confirmation:
+      title: 数据删除请求
+      text: |
+        你确定要请求删除你的账户吗？此操作不可撤销。
+
+        一旦提交请求，管理员将审核并处理。你将无法再访问你的账户。
+
+    delete_user:
+      title: 删除 {username}
+      text: "确定要删除此用户吗？"
+
+    erasure_request_confirmed: 删除请求已提交，等待管理员审核
+    
+    process_erasure:
+      anonymization_button: 匿名化
+      comments_label: 备注（可选）
+      confirmation: "确定要处理此删除请求吗？"
+      delete_button: 删除
+      title: 处理账户删除请求
+      text: "{username} 请求删除账户"
+
+    settings:
+      privacy_controls_heading: 隐私控制
+      request_data_button: 导出我的数据
+      request_data_description: 你可以下载包含你所有帖子和个人信息的数据副本
+      delete_account_button: 删除账户
+      delete_account_description: 永久删除你的账户和所有相关数据
+
+    user_controls:
+      delete_button: 删除账户
+      export_data_button: 导出数据
+
+  email:
+    confirm_erasure:
+      subject: 确认账户删除请求
+      body: |
+        嗨，{username}！
+
+        你在 {forum} 请求删除账户。
+
+        如果确认删除，请点击以下链接：
+        {url}
+
+        如果这不是你本人的操作，请忽略此邮件。
+
+    erasure_completed:
+      subject: 账户删除完成
+      body: |
+        嗨，{username}！
+
+        根据你的请求，你在 {forum} 的账户已被删除。
+
+        感谢你使用我们的论坛。
+
+    erasure_cancelled:
+      subject: 账户删除请求已取消
+      body: |
+        嗨，{username}！
+
+        你在 {forum} 的账户删除请求已被取消。
+
+        如有疑问，请联系管理员。
+
+  lib:
+    data:
+      avatar:
+        delete_confirmation: "确定要删除你的头像吗？"
+        title: 头像数据
+        description: 你上传的头像图片
