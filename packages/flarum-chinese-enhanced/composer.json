@@ -1,0 +1,32 @@
+{
+    "name": "local/flarum-chinese-enhanced",
+    "description": "Enhanced Chinese language support extension for Flarum",
+    "version": "1.0.0",
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Flarum Chinese Community",
+            "email": "admin@example.com"
+        }
+    ],
+    "require": {
+        "flarum/core": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FlarumChineseEnhanced\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Chinese Enhanced",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-language",
+                "color": "#e74c3c",
+                "backgroundColor": "#fff"
+            }
+        }
+    }
+}

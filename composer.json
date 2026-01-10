@@ -51,7 +51,8 @@
         "flarum/suspend": "*",
         "flarum/tags": "*",
         "predis/predis": "^2.2",
-        "local/lang-chinese-simplified": "*"
+        "local/lang-chinese-simplified": "*",
+        "local/flarum-chinese-enhanced": "*"
     },
     "config": {
         "preferred-install": "dist",
