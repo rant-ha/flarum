@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e735f1f90a0a421e48ca5fc52ede3a0",
+    "content-hash": "d7ddcdf38121459fef0b34e35a4a2332",
     "packages": [
         {
             "name": "asispts/http-accept",
@@ -5527,6 +5527,49 @@
                 }
             ],
             "time": "2024-09-21T08:32:55+00:00"
+        },
+        {
+            "name": "local/flarum-chinese-enhanced",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "packages/flarum-chinese-enhanced",
+                "reference": "6381655e0c21bdbc682a57f28e073630ac30083c"
+            },
+            "require": {
+                "flarum/core": "^2.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Chinese Enhanced",
+                    "category": "feature",
+                    "icon": {
+                        "name": "fas fa-language",
+                        "color": "#e74c3c",
+                        "backgroundColor": "#fff"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FlarumChineseEnhanced\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Flarum Chinese Community",
+                    "email": "admin@example.com"
+                }
+            ],
+            "description": "Enhanced Chinese language support extension for Flarum",
+            "transport-options": {
+                "symlink": false,
+                "relative": true
+            }
         },
         {
             "name": "local/lang-chinese-simplified",
